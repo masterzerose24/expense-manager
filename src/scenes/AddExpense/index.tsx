@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import moment from 'moment';
 import { Link, useHistory } from 'react-router-dom';
 import { bindActionCreators } from "redux";
 import { connect } from 'react-redux';
@@ -41,13 +42,14 @@ function AddExpense(props: any) {
   const { categories, addExpense } = props;
   const history = useHistory();
   const [formData, updateData] = useState({
-    category: { ...categories[0] }
+    category: { ...categories[0] },
+    date: moment(Date.now())
   });
 
   const dataFilter = (event: any, name: string) => {
     switch (name) {
       case 'category':
-        return categories.filter((category: any) => category.id === event);
+        return categories.filter((category: any) => category.id === event)[0];
       case 'date':
         return event;
       default:
@@ -95,7 +97,9 @@ function AddExpense(props: any) {
         <div className="date">
           <p className="name">Date</p>
           <div className="input">
-            <DatePicker onChange={e => onUpdateData(e, 'date')}></DatePicker>
+            <DatePicker 
+            defaultValue={moment(Date.now())}
+            onChange={e => onUpdateData(e, 'date')}></DatePicker>
           </div>
         </div>
 

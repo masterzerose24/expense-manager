@@ -1,5 +1,4 @@
 import React from 'react'
-import ExpenseModel from 'models/ExpenseModel';
 import { DollarCircleOutlined } from '@ant-design/icons';
 
 const DATE_FORMAT = 'MMM DD, YYYY';
