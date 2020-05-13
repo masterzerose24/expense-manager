@@ -1,0 +1,47 @@
+.add-expense {
+	display: block;
+	height: 100vh;
+	background: white;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 40px;
+
+		.title {
+			font-weight: 700;
+		}
+	}
+
+	.bodyForm {
+		padding: 20px 20px 0;
+
+		> div {
+			display: flex;
+			padding: 10px 0;
+			height: 60px;
+			align-items: center;
+		}
+
+		.name {
+			width: 120px;
+			text-align: left;
+			font-weight: 700;
+		}
+
+		.input {
+      flex: 1;
+      text-align: right;
+      
+    padding: 0 0 0 30%;
+		}
+
+		.settings {
+			font-size: 0.8em;
+			color: #aaa;
+			text-align: left;
+			border-bottom: 1px solid #aaaa;
+			padding-left: 10px;
+		}
+	}
+}

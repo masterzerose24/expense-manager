@@ -1,0 +1,29 @@
+@import '~antd/dist/antd.css';
+@import './styles/dashboard.scss';
+@import './styles/reset.scss';
+@import './styles/addExpense.scss';
+
+body {
+  background-color: #64bcbe;
+  font-family: 'Roboto';
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.centered-text {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  color: white;
+}
+
+.centered-text > p {
+  font-size: 4em;
+  width: 270px;
+  margin: auto;
+}
+
+
